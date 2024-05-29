@@ -71,3 +71,13 @@ canvas{
 .rules.show{
     transform: translateX(0);
 }
+
+.levels{
+    position: absolute;
+    top: 150px;
+    right: 30px;
+}
+
+.levels .btn.level{
+    margin-right: 10px;
+}
