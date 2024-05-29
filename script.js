@@ -5,6 +5,7 @@ const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
 let score = 0
+let maxScore = 0
 
 const brickRowCount = 9
 const brickColumnCount = 5
@@ -71,7 +72,13 @@ const drawPaddle = () =>{
 // Draw score on canvas
 const drawScore = () => {
     ctx.font = 'bold 20px Arial'
-    ctx.fillText(`Score: ${score}`,canvas.width-100,30)
+    ctx.fillText(`Score: ${score}`,canvas.width-120,40)
+}
+
+// Draw max score on canvas
+const drawMaxScore = () => {
+    ctx.font = 'bold 20px Arial'
+    ctx.fillText(`Max Score: ${maxScore}`,45,40)
 }
 
 // Draw bricks on canvas
@@ -137,7 +144,9 @@ const moveBall = () => {
 
     if(ball.y + ball.size > canvas.height){
         showAllBricks();
+        maxScore=(maxScore<score)?score:maxScore;
         score=0;
+        
     }
 }
 
@@ -164,7 +173,8 @@ const draw = () => {
     ctx.clearRect(0,0,canvas.width,canvas.height)
     drawBall()
     drawPaddle()   
-    drawScore() 
+    drawScore()
+    drawMaxScore() 
     drawBricks()
 }
 
