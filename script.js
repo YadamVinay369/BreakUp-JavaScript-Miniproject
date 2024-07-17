@@ -81,7 +81,7 @@ for (let i = 0; i < brickRowCount; i++) {
 const drawBall = () => {
   ctx.beginPath();
   ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095dd";
+  ctx.fillStyle = "#FBF6E2";
   ctx.fill();
   ctx.closePath();
 };
@@ -90,7 +90,7 @@ const drawBall = () => {
 const drawPaddle = () => {
   ctx.beginPath();
   ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
-  ctx.fillStyle = "#0095dd";
+  ctx.fillStyle = "#FBF6E2";
   ctx.fill();
   ctx.closePath();
 };
@@ -113,7 +113,7 @@ const drawBricks = () => {
     column.forEach((brick) => {
       ctx.beginPath();
       ctx.rect(brick.x, brick.y, brick.w, brick.h);
-      ctx.fillStyle = brick.visibility ? "#0095dd" : "transparent";
+      ctx.fillStyle = brick.visibility ? "#FBF6E2" : "transparent";
       ctx.fill();
       ctx.closePath();
     });
@@ -248,3 +248,12 @@ document.addEventListener("keyup", keyUp);
 //Rules event handler and close event handler
 rulesBtn.addEventListener("click", () => rules.classList.add("show"));
 closeBtn.addEventListener("click", () => rules.classList.remove("show"));
+
+
+//Loading 
+
+let loader = document.querySelector("#loader");
+
+window.addEventListener("load",()=>{
+  loader.style.display = "none"
+})
