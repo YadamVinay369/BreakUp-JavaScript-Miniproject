@@ -255,5 +255,8 @@ closeBtn.addEventListener("click", () => rules.classList.remove("show"));
 let loader = document.querySelector("#loader");
 
 window.addEventListener("load",()=>{
-  loader.style.display = "none"
+  let x = setTimeout(()=>{loader.style.display = "none"
+    console.log("called")
+  },3000)
+  
 })
