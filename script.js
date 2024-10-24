@@ -26,11 +26,11 @@ const ball = {
 };
 
 // Update ball speed when level changes
-const updateBallSpeed=()=>{
-    ball.speed = level
-    ball.dx = level
-    ball.dy = level
-}
+const updateBallSpeed = () => {
+  ball.speed = level;
+  ball.dx = level;
+  ball.dy = level;
+};
 
 // event handler to handling different levels
 easy.addEventListener("click", () => {
@@ -249,14 +249,11 @@ document.addEventListener("keyup", keyUp);
 rulesBtn.addEventListener("click", () => rules.classList.add("show"));
 closeBtn.addEventListener("click", () => rules.classList.remove("show"));
 
-
-//Loading 
-
+//Loading Effect for 3sec
 let loader = document.querySelector("#loader");
 
-window.addEventListener("load",()=>{
-  let x = setTimeout(()=>{loader.style.display = "none"
-    console.log("called")
-  },3000)
-  
-})
+window.addEventListener("load", () => {
+  let x = setTimeout(() => {
+    loader.style.display = "none";
+  }, 3000);
+});

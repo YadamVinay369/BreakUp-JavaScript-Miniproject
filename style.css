@@ -32,7 +32,6 @@ canvas{
     color: #FBF6E2;
     border-radius: 5px;
     transition: ease 0.5s;
-    font-size: 20px;
 }
 
 .btn:focus{
